@@ -1,3 +1,11 @@
-module.exports = function countByMultiples(length, x) {
-  // write your code in here
+module.exports = function countByMultiples(numItems, multiplesOf) {
+  const multiples = [ ];
+
+  for (let i = multiplesOf; i <= numItems * multiplesOf; i++) {
+    if (i % multiplesOf === 0) {
+      multiples.push(i);
+    }
+  }
+  
+  return multiples;
 }
